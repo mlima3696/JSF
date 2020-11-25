@@ -10,10 +10,14 @@
 	<h1>Olá Mundo - Hello Word</h1>
 	<h:form id="formPessoa">
 		<table></table>
+		Nome:
 		<h:inputText id="campoNome" value="#{pessoaBean.nome}"></h:inputText>
-		<h:outputText value="Teste JSF" />
-		<br />
-		<h:commandButton value="Ok"></h:commandButton>
+		Sobrenome:
+		<h:inputText id="sobrenome" value="#{pessoaBean.sobrenome}" />
+		<br/>
+		<h:outputText value="#{pessoaBean.nomeCompleto}"></h:outputText>
+		<br/>
+		<h:commandButton value="Ok" action="#{pessoaBean.mostrarNome}"></h:commandButton>
 	</h:form>
 </h:body>
 </html>
